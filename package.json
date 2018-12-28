@@ -1,0 +1,26 @@
+{
+  "name": "spider",
+  "version": "1.0.0",
+  "description": "简称爬虫",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IVANLEE99/spider.git"
+  },
+  "keywords": [
+    "spider"
+  ],
+  "author": "羊示子木",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IVANLEE99/spider/issues"
+  },
+  "homepage": "https://github.com/IVANLEE99/spider#readme",
+  "dependencies": {
+    "iconv-lite": "^0.4.24",
+    "scrape-it": "^5.1.1"
+  }
+}
