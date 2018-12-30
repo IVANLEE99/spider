@@ -27,11 +27,15 @@ var baidu = {
 
 let wechat = {
     url:'https://weixin.sogou.com/',
+    meta:`${new Date().toLocaleDateString()} --------wechat热榜`,
     data:{
         topArticles:{
-            listItem:'#loginWrap > div.wrapper > div.main-left > div.hd-list > div > a',
+            listItem:'#loginWrap > div.wrapper > div.main-left > div.hd-list > div.sd-slider a',
             data: {
-                title:'p',
+                title:{
+                    selector:'div.text > p',
+                    attr:'title'
+                },
                 link:{
                     attr:'href'
                 },
@@ -68,6 +72,7 @@ let wechat = {
 
 let zhihu = {
     url:'https://zhihu.sogou.com/',
+    meta:`${new Date().toLocaleDateString()} --------知乎热榜`,
     data:{
         topArticles:{
             listItem:'body > div.hd-header > div.main-left > div > div.tabcontant > ul > li',
@@ -87,19 +92,18 @@ let zhihu = {
         hotList:{
             listItem:'#content_wrapper > ul > li',
             data: {
-                title:'p > a',
+                title:'p.tit > a',
                 link:{
-                    selector:'p > a',
+                    selector:'p.tit > a',
                     attr:'href'
                 },
                 img:{
                     selector:'div.img-box > a > img',
                     attr:'src'
                 },
-                des:{
-                    selector:'div.txt-box > p'
-                },
-                from:'div.txt-box > div > a',
+                zan:'div.txt-box span.zan',
+                des:'div.txt-box > p.p2 > a',
+                from:'div.txt-box > p.p1 > a',
                 time:'div.txt-box > div > span'
             }
         }
